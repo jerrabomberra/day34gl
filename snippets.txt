@@ -1,0 +1,197 @@
+{
+    "Class __init": {
+        "scope": "python",
+        "prefix": "class__init_",
+        "body": [
+            "class $1():",
+            "   def __init__(self) -> None:",
+            "\t  pass "
+        ],
+        "description": "inserts class and __init__(self):"
+    }
+        "super": {
+        "scope": "python",
+        "prefix": "super()",
+        "body": [
+            "super().__init__()"
+        ],
+        "description": "inserts super().__init__()"
+    }
+
+	"Turtle": {
+        "scope": "python",
+        "prefix": "turtles",
+        "body": [
+            "from turtle import Turtle, Screen",
+            "",
+            "tim = Turtle()",
+            "",
+            "for _ in range(1,4):",
+            "\ttim.forward(100)",
+            "\ttim.right(90)",
+            "",
+            "tim.home()",
+            "",
+            "screen = Screen()",
+            "screen.exitonclick()"
+        ],
+        "description": "Shell for turtle code"
+    }
+    "turtles": {
+        "scope": "python",
+        "prefix": "timmy",
+        "body": [
+            "import colorgram",
+            "import turtle as t",
+            "from turtle import Screen",
+            "from turtle import Turtle",
+            "import random",
+            "",
+            "t.colormode(255)",
+            "tim = Turtle()",
+            "screen = Screen()",
+            "screen.setup(width=600, height=600)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "screen.exitonclick()"
+        ],
+        "description": "inserts basic turtle call"
+    }
+    "list map lambda": {
+        "scope": "python",
+        "prefix": "lml",
+        "body": [
+            "my_list = list(map(lambda $1 : $2 , $3 ))"
+        ],
+        "description": "inserts my_list = list(map(lambda parm1 : operation, input))"
+    }
+    "data science all imports": {
+        "scope": "python",
+        "prefix": "ml import",
+        "body": [
+            "import pandas as pd",
+            "import numpy as np",
+            "import pandas_profiling",
+            "from sklearn.model_selection import train_test_split ",
+            "from sklearn import preprocessing",
+            "from sklearn.naive_bayes import GaussianNB",
+            "from sklearn.metrics import accuracy_score",
+            "from sklearn.tree import DecisionTreeClassifier ",
+            "from sklearn.metrics import accuracy_score",
+            "from sklearn.metrics import confusion_matrix",
+            "from sklearn import metrics",
+            "import random",
+            "import matplotlib.pyplot as plt",
+            "from IPython.display import Image  ",
+            "from sklearn.tree import export_graphviz",
+            "import pydotplus",
+            "from sklearn import preprocessing",
+            "from io import StringIO",
+            "from sklearn.ensemble import RandomForestClassifier",
+            "from sklearn.preprocessing import StandardScaler",
+            "from sklearn.model_selection import GridSearchCV",
+            "from keras.wrappers.scikit_learn import KerasClassifier",
+            "from keras.models import Sequential",
+            "from keras.layers import Dense, Activation, Dropout",
+            "from numpy.random import seed"
+        ],
+        "description": "imports data science modules"
+    }
+        "Read with open": {
+        "scope": "python",
+        "prefix": "with open ",
+        "body": [
+            "with open(\"$1.txt\", \"r\") as file:",
+            "\t   lines = file.readlines()"
+        ],
+        "description": "uses with open to read a file"
+    }
+        "list comp": {
+        "scope": "python",
+        "prefix": "list comp",
+        "body": [
+            "list_$1 = [$2 for $3 in $4 ]"
+        ],
+        "description": "inserts a basic list comprehension struture"
+    }
+        "match case": {
+        "scope": "python",
+        "prefix": "match input",
+        "body": [
+            "def do_this():",
+            "\tprint(\"Doing this\")",
+            "",
+            "",
+            "def do_that():",
+            "\tprint(\"Doing that\")",
+            "",
+            "",
+            "match input(\"Do this or that? \"):",
+            "\tcase \"this\":",
+            "\t\tdo_this()",
+            "\tcase \"that\":",
+            "\t\tdo_that()",
+            "\tcase _:",
+            "\t\tprint(\"Invalid input! \")"
+        ],
+        "description": "matches input using case and functions"
+    },
+    "email": {
+        "scope": "python",
+        "prefix": "my_email",
+        "body": [
+            "import smtplib",
+            "MY_EMAIL = \"jerrabomberra@gmail.com\"",
+            "MY_PASSWORD = \"bxettybczgryheag\"",
+            "with smtplib.SMTP(\"smtp.gmail.com\") as connection:",
+            "\tconnection.starttls()",
+            "\tconnection.login(MY_EMAIL, MY_PASSWORD)",
+            "\tconnection.sendmail(",
+            "\t\tfrom_addr=MY_EMAIL,",
+            "\t\tto_addrs=birthday_person[\"email\"],",
+            "\t\tmsg=f\"Subject:Happy Birthday!\\n\\n{contents}\",",
+            "\t)",
+            ""
+        ],
+        "description": "Sends smtp email"
+    },
+    "Simple API": {
+        "scope": "python",
+        "prefix": "Simple API",
+        "body": [
+            "import requests",
+            "",
+            "",
+            "def get_quote():",
+            "\tresponse = requests.get(url=\"https://api.kanye.rest\")",
+            "\tresponse.raise_for_status()",
+            "\tdata = response.json()",
+            "\tquote = data[\"quote\"]",
+            ""
+        ],
+        "description": "Simple non-parameter API"
+    },
+    "while true": {
+        "scope": "python",
+        "prefix": "while True:",
+        "body": [
+            "while True:",
+            "\ttext = input(\"Enter text here please: \")",
+            "\tif text != \"\":",
+            "\t\tnew_text = text.lower()",
+            "\t\tbreak",
+            "\telse:",
+            "\t\tcontinue",
+            "",
+            "",
+            "print(new_text)"
+        ],
+        "description": "inserts while true structure"
+    },
+}
